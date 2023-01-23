@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "134592644688",
+    "firebase_url": "https://third-eye-5200a.firebaseio.com",
+    "project_id": "third-eye-5200a",
+    "storage_bucket": "third-eye-5200a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134592644688:android:9ada422b2260b78a1e7355",
+        "android_client_info": {
+          "package_name": "com.harrytheboss.wtfishappening"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134592644688-38iiaq3fve2tqh8r8fidp851u9flhbjo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE5vkr1D0eiYlEwxu85xz9kZqxCl5TYpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134592644688-38iiaq3fve2tqh8r8fidp851u9flhbjo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

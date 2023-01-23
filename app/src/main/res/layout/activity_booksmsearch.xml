@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="horizontal"
+    tools:context=".booksmsearch">
+
+    <EditText
+        android:id="@+id/smsname"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:allowUndo="true"
+        android:autoText="true"
+        android:backgroundTint="#43A047"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="Enter name of person here"
+        android:inputType="textPersonName"
+        android:textColor="#43A047"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView70"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView70"
+        app:layout_constraintTop_toBottomOf="@+id/textView70"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <Button
+        android:id="@+id/smsgo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="304dp"
+        android:backgroundTint="#43A047"
+        android:onClick="searchsms"
+        android:text="FIND IN DATABASE"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/smsname"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="@+id/smsname"
+        app:layout_constraintTop_toBottomOf="@+id/checkpub"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <CheckBox
+        android:id="@+id/checkcity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#43A047"
+        android:checked="true"
+        android:text="Include city while searching"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/smsname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/smsname"
+        app:layout_constraintTop_toBottomOf="@+id/smsname"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <CheckBox
+        android:id="@+id/checkpub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#43A047"
+        android:checked="true"
+        android:text="Include public database"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/checkpri"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkpri"
+        app:layout_constraintTop_toBottomOf="@+id/checkpri"
+        app:layout_constraintVertical_bias="0.014" />
+
+    <CheckBox
+        android:id="@+id/checkpri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#43A047"
+        android:checked="true"
+        android:text="Include personal database"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/checkcity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkcity"
+        app:layout_constraintTop_toBottomOf="@+id/checkcity"
+        app:layout_constraintVertical_bias="0.013" />
+
+    <TextView
+        android:id="@+id/textView69"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search name with :"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView47"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView47"
+        app:layout_constraintTop_toBottomOf="@+id/imageView47"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <TextView
+        android:id="@+id/textView70"
+        android:layout_width="364dp"
+        android:layout_height="wrap_content"
+        android:text="*Enter characters to find the person from database"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView69"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView69"
+        app:layout_constraintTop_toBottomOf="@+id/textView69"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <ImageView
+        android:id="@+id/googlelogo"
+        android:layout_width="75dp"
+        android:layout_height="73dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/smscity"
+        app:layout_constraintEnd_toEndOf="@+id/smscity"
+        app:layout_constraintStart_toStartOf="@+id/smscity"
+        app:layout_constraintTop_toTopOf="@+id/smscity"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_light" />
+
+    <EditText
+        android:id="@+id/smscity"
+        android:layout_width="134dp"
+        android:layout_height="110dp"
+        android:backgroundTint="#43A047"
+        android:ems="10"
+        android:foregroundTint="#FFFFFF"
+        android:hint="Enter city"
+        android:inputType="textMultiLine|textPersonName"
+        android:maxLines="3"
+        android:singleLine="false"
+        android:textAlignment="center"
+        android:textColor="#43A047"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkpub"
+        app:layout_constraintEnd_toEndOf="@+id/smsname"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/checkpri"
+        app:layout_constraintTop_toBottomOf="@+id/smsname" />
+
+    <TextView
+        android:id="@+id/textView71"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="*Results will be displayed below :-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/smsgo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/smsgo"
+        app:layout_constraintTop_toBottomOf="@+id/smsgo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <HorizontalScrollView
+
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#2D7CB342"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/smsgo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/smsgo"
+        app:layout_constraintTop_toBottomOf="@+id/textView71"
+        app:layout_constraintVertical_bias="0.036">
+
+        <ScrollView
+            android:id="@+id/scrollsms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#007CB342"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/smsgo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/smsgo"
+            app:layout_constraintTop_toBottomOf="@+id/textView71"
+            app:layout_constraintVertical_bias="0.036">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView84"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/smsdisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="displays"
+                    android:textAlignment="viewStart"
+                    android:textColor="#43A047"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/imageView47"
+        android:layout_width="111dp"
+        android:layout_height="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044"
+        app:srcCompat="@drawable/banner" />
+
+    <TextView
+        android:id="@+id/sstext"
+        android:layout_width="182dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="28dp"
+        android:background="#E4E4E4"
+        android:backgroundTint="#00CCC1C1"
+        android:isScrollContainer="true"
+        android:scrollIndicators="bottom"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollHorizontally="true"
+        android:text="XXXX"
+        android:textAlignment="textStart"
+        android:textColor="#43A047"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView69"
+        app:layout_constraintEnd_toEndOf="@+id/textView70"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView69"
+        app:layout_constraintTop_toTopOf="@+id/textView69" />
+
+    <TextView
+        android:id="@+id/countdisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#FA0000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView71"
+        app:layout_constraintEnd_toEndOf="@+id/smsgo"
+        app:layout_constraintStart_toEndOf="@+id/textView71"
+        app:layout_constraintTop_toTopOf="@+id/textView71" />
+
+    <Switch
+        android:id="@+id/updown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Scroll to bottom / top"
+        android:textAlignment="center"
+        android:thumbTint="#43A047"
+        android:trackTint="#7CB342"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/scrollView"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        app:layout_constraintVertical_bias="0.302"
+        tools:checked="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

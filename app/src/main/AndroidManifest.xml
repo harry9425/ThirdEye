@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.harrytheboss.wtfishappening">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".app"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".booksmsearch"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name=".bookadd"
+            android:noHistory="true"
+            android:parentActivityName=".book"
+            android:screenOrientation="nosensor"/>
+        <activity
+            android:name=".book"
+            android:parentActivityName=".chooser"
+            android:noHistory="true"
+            android:windowSoftInputMode="adjustNothing"
+            android:screenOrientation="nosensor" />
+        <activity android:name=".kyu" />
+        <activity android:name=".typecode">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="thethirdeyeapp.trackmyfriend.code.com"
+                    android:scheme="http" />
+                <data
+                    android:host="thethirdeyeapp.trackmyfriend.code.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".sendcode"
+            android:screenOrientation="nosensor" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9227296073858132~4119102040" />
+
+        <activity
+            android:name=".MapsActivity2"
+            android:label="@string/title_activity_maps2"
+            android:parentActivityName=".parkingstart" />
+        <activity
+            android:name=".savemyvehicle"
+            android:noHistory="true"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".parkingstart"
+            android:parentActivityName=".chooser"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".moreinfo"
+            android:parentActivityName=".signup"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".restdone"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".forgetpass"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".resetallow"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".splashscreen"
+            android:excludeFromRecents="true"
+            android:screenOrientation="nosensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:parentActivityName=".getdatafromserver" />
+        <activity
+            android:name=".otpverification"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".gpsproblems"
+            android:parentActivityName=".chooser"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".chooser"
+            android:parentActivityName=".LOGIN"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".signup"
+            android:parentActivityName=".LOGIN"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".LOGIN"
+            android:noHistory="true"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".getdatafromserver"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".MainActivity"
+            android:parentActivityName=".gpsproblems"
+            android:screenOrientation="nosensor" />
+    </application>
+
+</manifest>

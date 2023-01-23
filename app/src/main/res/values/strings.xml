@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">THIRD EYE</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_savemyvehicle">Map</string>
+    <string name="title_activity_positiondisplay">Map</string>
+    <string name="title_activity_maps2">Map</string>
+</resources>
